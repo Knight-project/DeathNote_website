@@ -1,0 +1,224 @@
+
+@font-face {
+    font-family:"DEATHNOTE Font";src:url("./Fonts/DEATHNOTEFont.eot?") format("eot"),url("./Fonts/DEATHNOTEFont.woff") format("woff"),url("./Fonts/DEATHNOTEFont.ttf") format("truetype"),url("DEATHNOTEFont.svg#DEATHNOTE-Font") format("svg");font-weight:normal;font-style:normal;
+}
+
+@keyframes Height {
+    from {
+        height: 0%;
+    }
+
+    to {
+        height: 85%;
+    }
+}
+
+@keyframes Width {
+    from {
+        width: 0%;
+        left: 50%;
+    }
+    to {
+        width: 96%;
+        left: 2%;
+    }
+}
+
+@keyframes shoo {
+    from{
+        opacity: 0;
+    }
+    to {
+        opacity: 100;
+    }
+    
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body { z-index: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+    margin: 0;
+    font-family: DEATHNOTE Font;
+    color: rgb(255, 255, 255);
+    overflow: hidden;
+}
+
+h1 {
+    z-index: 2;
+    margin-top: 17vh;
+    font-size: 3rem;
+}
+
+.countdown-container {
+    display: flex;
+    z-index: 2;
+}
+
+.big-text {
+    text-align: center;
+    
+    font-size: 60px;
+}
+#sub-text {
+    font-size: 15px;
+}
+
+#list {
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-transform:capitalize ;
+    text-align: left;
+    padding: 20px;
+    z-index: 2;
+    line-height: 30px;
+    margin-left: 30px;
+}
+
+
+
+#name {
+    z-index: 2;
+    border: none;
+    background-color: inherit;
+    height: 25px;
+    width: 70vw;
+    font-size: 20px;
+    text-align: center;
+    font-family: DEATHNOTE Font;
+    color: white;
+    text-transform: capitalize;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#name::placeholder{
+    font-size: 25px;
+    color: rgb(170, 170, 170);
+    font-family: DEATHNOTE Font;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+#name:focus {
+    border: none;
+    border-color: transparent;
+    outline: none;
+    
+}
+
+#desc {
+    z-index: 2;
+    border: none;
+    background-color: inherit;
+    height: 20px;
+    width: 80vw;
+    font-size: 15px;
+    text-align: center;
+    font-family: DEATHNOTE Font;
+    color: white;
+    text-transform: lowercase;
+}
+
+#desc::placeholder{
+    font-size: 15px;
+    color: rgb(170, 170, 170);
+    font-family: DEATHNOTE Font;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+#desc:focus{
+    border: none;
+    border-color: transparent;
+    outline: none;
+}
+
+.lines {
+    z-index: 1;
+    position: absolute;
+}
+
+#line-1 {
+    position: absolute;
+    display: block;
+    width: 3px;
+    background-color: white;
+    left: 2%;
+    top: 10%;
+
+    animation: Height 400ms ease-in 900ms 1;
+    animation-fill-mode: forwards;
+
+
+}
+
+#line-3 {
+    position: absolute;
+    display: block;
+    width: 3px;
+    background-color: white;
+    right: 2%;
+    top: 10%;
+
+    animation: Height 400ms ease-in 900ms 1;
+    animation-fill-mode: forwards;
+
+
+}
+
+#line-2{
+    position: absolute;
+    display: block;
+    background-color: white;
+    height: 3px;
+    top: 10%;
+    left: 2%;
+
+    animation: Width 400ms ease-in 500ms 1;
+    animation-fill-mode: forwards;
+}
+#line-4 {
+    position: absolute;
+    display: block;
+    background-color: white;
+    height: 3px;
+    bottom: 5%;
+    left: 2%;
+
+    animation: Width 400ms ease-in 850ms 1;
+    animation-fill-mode: forwards;
+}
+
+#skull {
+    position: absolute;
+    top: 0%;
+    align-self: center;
+    height: 20%;
+    opacity: 0;
+    background-image: radial-gradient(black,rgba(0, 0, 0, 0.484) , rgba(0, 0, 0, 0.097),rgba(0, 0, 0, 0.021));
+
+    animation: shoo 500ms ease-in 500ms 1;
+    animation-fill-mode: forwards;
+}
+
+#container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+
+    animation: shoo 500ms ease-in 1300ms 1;
+    animation-fill-mode: forwards;
+}
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Death Note</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="DEATHNOTEFont.tff">
+  <link rel="shortcut icon" href="zavicon.ico" type="image/x-icon">
+  <script src="app.js" defer ></script>
+</head>
+
+<body>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <section id="container">
+    <h1>Instruction</h1>
+
+    <ol type="I" id="list">
+      <li class="list-item">The user needs to have the name and the face of the target in their mind.</li>
+      <li class="list-item">The cause of death needs to be specified before the countdown ends.</li>
+      <li class="list-item">If no cause is specified the target will die of a heart attack</li>
+    </ol>
+    
+    <div class="countdown-container">
+      <div class="seconds-c">
+        <p class="big-text" id="secs">40</p>
+        <span id="sub-text">seconds left</span>
+      </div>
+  
+    </div>
+  
+    <input id="name" type="text" onfocusout="time()" placeholder="name">
+    <input type="text" name="desc" id="desc" placeholder="description">
+  </section>
+  
+  
+  <div id="line-box">
+    <div class="line" id="line-1"></div>
+    <div class="line" id="line-2"></div>
+    <div class="line" id="line-3"></div>
+    <div class="line" id="line-4"></div>
+  </div>
+  <img id="skull" src="skull.png">
+  <diV id="reset"></diV>
+  
+</body>
+
+</html>
